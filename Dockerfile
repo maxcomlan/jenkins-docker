@@ -12,7 +12,6 @@ RUN add-apt-repository \
 RUN apt-get update && apt-get install -y docker-ce-cli
 RUN groupadd docker
 RUN usermod -aG docker jenkins
-RUN chmod 666 /var/run/docker.sock
 USER jenkins
 
 RUN jenkins-plugin-cli --plugins blueocean:1.24.3
